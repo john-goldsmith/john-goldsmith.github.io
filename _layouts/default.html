@@ -1,44 +1,42 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<body id="post-index" {% if page.image.feature %}class="feature"{% endif %} itemscope itemtype="http://schema.org/WebPage">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+{% include browser-upgrade.html %}
+{% include navigation.html %}
 
-    </head>
-    <body>
+<div class="entry-header">
+  {% if page.image.feature %}
+    <div class="entry-image"><img src="{{ site.url }}/assets/img/{{ page.image.feature }}" alt="{{ page.title }}" itemprop="image">
+      {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+    </div><!-- /.entry-image -->
+  {% endif %}
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>{{ site.title }}</h1>
+      <h2 itemprop="name">{{ page.title }}</h2>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  {{ content }}
+</div><!-- /#main -->
 
-          {{ content }}
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+{% include scripts.html %}
 
-    </body>
+</body>
 </html>

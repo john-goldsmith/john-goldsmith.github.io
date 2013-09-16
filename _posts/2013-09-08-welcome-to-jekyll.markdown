@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+description: "Stuff"
 date:   2013-09-09 16:09:57
 categories: jekyll update
+modified: 2013-05-31
+tags: [sample post]
+image:
+  feature: abstract-3.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+share: true
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
