@@ -1,32 +1,50 @@
----
-layout: default/application
----
-<div class="post">
+<!DOCTYPE html>
+<html lang="en">
 
-  <header class="post-header">
-    <h1 class="post-title">{ page.title }</h1>
-    <p class="post-meta">
-      { page.date | date: "%b %-d, %Y" }
-      % if page.author %
-       • { page.author }
-      % endif %
-      % if page.meta %
-       • { page.meta }
-      % endif %
-    </p>
-  </header>
+  {% include shared/head.html %}
 
-  <article class="post-content">
-    { content }
-  </article>
+  <body>
 
-  Tags
-  <ul>
-    % for tag in page.tags %
-      <li>
-        <a href="/{ tag }">{ tag }</a>
-      </li>
-    % endfor %
-  </ul>
+    {% include default/header.html %}
 
-</div>
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-meta">
+              {{ page.date | date: "%b %-d, %Y" }}
+              {% if page.author %}
+               • {{ page.author }}
+              {% endif %}
+              {% if page.meta %}
+               • {{ page.meta }}
+              {% endif %}
+            </p>
+          </header>
+
+          <article class="post-content">
+            {{ content }}
+          </article>
+
+          Tags
+          <ul>
+            {% for tag in page.tags %}
+              <li>
+                <a href="/{{ tag }}">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    {% include default/footer.html %}
+
+  </body>
+
+</html>

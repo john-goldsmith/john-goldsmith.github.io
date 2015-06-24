@@ -1,14 +1,31 @@
----
-layout: default/application
----
-<div class="post">
+<!DOCTYPE html>
+<html lang="en">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+  {% include shared/head.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+  <body>
 
-</div>
+    {% include default/header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+          </header>
+
+          <article class="post-content">
+            {{ content }}
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    {% include default/footer.html %}
+
+  </body>
+
+</html>

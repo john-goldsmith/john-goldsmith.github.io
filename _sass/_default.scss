@@ -2,5 +2,9 @@
  * Default theme
  */
 
-@import "default/style";
-@import "default/highlight";
+@import "default/vars",
+        "default/mixins",
+        "default/base",
+        "default/layout",
+        "default/highlight"
+;

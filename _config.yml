@@ -1,44 +1,3 @@
-theme: kasper
-
-###########
-# Default #
-###########
-title: Code In Plain English
-email: hello@creative-dna.net
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://creative-dna.net" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username:  john-goldsmith
-highlighter: pygments
-markdown: kramdown
-sass:
-  sass_dir: _sass
-  style: compressed
-
-##########
-# Kactus #
-##########
-# name: Your New Jekyll Site
-# description: Blogging about stuffs
-# meta_description: "Your New Jekyll Site, Blogging about stuffs"
-about_page: true
-# markdown: redcarpet
-# highlighter: pygments
-paginate: 20
-# baseurl: /
-# domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus_shortname: 'your-disqus-shortname'
-
-# Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
-author:         'John Goldsmith'
-# authorTwitter:  'YourTwitterUsername'
-permalink:       /:year/:title/
 defaults:
   -
     scope:
@@ -53,6 +12,26 @@ defaults:
     values:
       layout: kactus/post
 
-##########
-# Kasper #
-##########
+about_page: true
+author: "John Goldsmith"
+baseurl: "/" # the subpath of your site, e.g. /blog/
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+disqus_shortname: 'your-disqus-shortname'
+email: hello@creative-dna.net
+github_username: john-goldsmith
+google_analytics: "UA-XXXXXXXX-X"
+highlighter: pygments
+logo: false
+markdown: kramdown # redcarpet
+meta_description: "Code In Plain English"
+paginate: 20
+permalink: /:year/:month/:day/:title
+sass:
+  sass_dir: _sass
+  style: compressed
+theme: kactus
+title: Code In Plain English
+url: "http://creative-dna.net" # the base hostname & protocol for your site
