@@ -3,5 +3,10 @@
  * https://github.com/rosario/kasper
  */
 
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+  display:inline;
+}
+
 @import "kasper/style";
 @import "kasper/highlight";

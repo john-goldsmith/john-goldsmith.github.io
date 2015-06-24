@@ -1,3 +1,5 @@
+theme: kasper
+
 ###########
 # Default #
 ###########
@@ -12,8 +14,6 @@ url: "http://creative-dna.net" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  john-goldsmith
 highlighter: pygments
-
-# Build settings
 markdown: kramdown
 sass:
   sass_dir: _sass
@@ -25,12 +25,9 @@ sass:
 # name: Your New Jekyll Site
 # description: Blogging about stuffs
 # meta_description: "Your New Jekyll Site, Blogging about stuffs"
-
 about_page: true
-
 # markdown: redcarpet
 # highlighter: pygments
-
 paginate: 20
 # baseurl: /
 # domain_name: 'http://yourblog-domain.com'
@@ -41,22 +38,20 @@ disqus_shortname: 'your-disqus-shortname'
 url:            'http://your-blog-url.example.com'
 author:         'John Goldsmith'
 # authorTwitter:  'YourTwitterUsername'
-
 permalink:       /:year/:title/
-
 defaults:
   -
     scope:
       path: "" # empty string for all files
       type: pages
     values:
-      layout: default
+      layout: kactus/application
   -
     scope:
       path: "" # empty string for all files
       type: posts
     values:
-      layout: post
+      layout: kactus/post
 
 ##########
 # Kasper #
