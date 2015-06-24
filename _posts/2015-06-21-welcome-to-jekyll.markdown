@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-06-21 21:35:31
 tags:   ember ruby
